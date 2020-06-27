@@ -1,0 +1,9 @@
+<link href="<?php echo base_url('/inti/css/icofont.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/linearicons.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/magnific-popup.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/animsition.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/swiper.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/theme1.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/responsive.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('/inti/css/dark.css'); ?>" rel="stylesheet">
