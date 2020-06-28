@@ -28,7 +28,7 @@
     <section class="content-header">
       <h1>
         Data Tables
-        <small>- Daftar Artikel</small>
+        <small>- Daftar Project</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -42,19 +42,23 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <a href="<?php echo site_url("Artikel_import_admin/form") ?>"class="btn btn-primary"><i class="fa fa-plus-circle"></i> Import Artikel</a>
+          <a href="<?php echo site_url("Project_import_admin/form") ?>"class="btn btn-primary"><i class="fa fa-plus-circle"></i> Import Project</a>
           <table id="productTable" class="table-bordered table-hover" style="table-layout: auto; width: 100%; ">
             <thead>
             <tr>
               <th>Id</th>
-              <th>Tanggal</th>
               <th>Kategori</th>
               <th>Judul</th>
-              <th>Isi</th>
-              <th>Ayat</th>
-              <th>Tag</th>
+              <th>Mini Text</th>
+              <th>Tanggal</th>
+              <th>Admin Id</th>
+              <th>Nama Client</th>
+              <th>Lokasi</th>
               <th>Foto</th>
-              <th>Admin</th>
+              <th>Foto 2</th>
+              <th>Foto 3</th>
+              <th>Foto 4</th>
+              <th>Deskripsi</th>
             </tr>
             </thead>
             <tbody>
@@ -62,15 +66,19 @@
                 if( ! empty($import)){
                   foreach($import as $data){
                     echo "<tr>";
-                    echo "<td>".$data->id_ar."</td>";
-                    echo "<td>".$data->tanggal_ar."</td>";
-                    echo "<td>".$data->id_kat."</td>";
-                    echo "<td>".$data->judul_ar."</td>";
-                    echo "<td>".$data->isi_ar."</td>";
-                    echo "<td>".$data->ayat_ar."</td>";
-                    echo "<td>".$data->id_tag."</td>";
-                    echo "<td>".$data->foto_ar."</td>";
+                    echo "<td>".$data->id_pro."</td>";
+                    echo "<td>".$data->kategori_pro."</td>";
+                    echo "<td>".$data->judul_pro."</td>";
+                    echo "<td>".$data->mini_text_pro."</td>";
+                    echo "<td>".$data->tanggal_pro."</td>";
                     echo "<td>".$data->id_adm."</td>";
+                    echo "<td>".$data->nama_client_pro."</td>";
+                    echo "<td>".$data->lokasi_pro."</td>";
+                    echo "<td>".$data->img_1_pro."</td>";
+                    echo "<td>".$data->img_2_pro."</td>";
+                    echo "<td>".$data->img_3_pro."</td>";
+                    echo "<td>".$data->img_4_pro."</td>";
+                    echo "<td>".$data->isi_pro."</td>";
                     echo "</tr>";
                   }
                 }else{
@@ -81,14 +89,18 @@
             <tfoot>
             <tr>
               <th>Id</th>
-              <th>Tanggal</th>
               <th>Kategori</th>
               <th>Judul</th>
-              <th>Isi</th>
-              <th>Ayat</th>
-              <th>Tag</th>
+              <th>Mini Text</th>
+              <th>Tanggal</th>
+              <th>Admin Id</th>
+              <th>Nama Client</th>
+              <th>Lokasi</th>
               <th>Foto</th>
-              <th>Admin</th>
+              <th>Foto 2</th>
+              <th>Foto 3</th>
+              <th>Foto 4</th>
+              <th>Deskripsi</th>
             </tr>
             </tfoot>
           </table>

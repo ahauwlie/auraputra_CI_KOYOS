@@ -19,11 +19,11 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Detail Artikel</h1>
+      <h1>Detail Project</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Tables</a></li>
-        <li class="active">Detail Artikel</li>
+        <li class="active">Detail Project</li>
       </ol>
     </section>
 
@@ -37,44 +37,63 @@
               <div class="col-lg-6">
                 <div class="form-group">
                     <label>Judul</label>
-                    <p class="form-control-static"><?php echo $artikel['judul_ar']; ?></p>
+                    <p class="form-control-static"><?php echo $project['judul_pro']; ?></p>
                 </div>
                 <div class="form-group">
                     <label>Isi</label>
-                    <p class="form-control-static"><?php echo $artikel['isi_ar']; ?></p>
+                    <p class="form-control-static"><?php echo $project['isi_pro']; ?></p>
                 </div>
                 <div class="form-group">
-                    <label>Ayat</label>
-                    <p class="form-control-static"><?php echo $artikel['ayat_ar']; ?></p>
+                    <label>Mini_Text</label>
+                    <p class="form-control-static"><?php echo $project['mini_text_pro']; ?></p>
                 </div>
                 <div class="form-group">
                     <label>Tanggal</label>
-                    <p class="form-control-static"><?php echo $artikel['tanggal_ar']; ?></p>
+                    <p class="form-control-static"><?php echo $project['tanggal_pro']; ?></p>
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <p class="form-control-static"><?php echo $project['kategori_pro']; ?></p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label>Tag</label>
-                  <p class="form-control-static"><?php echo $artikel['id_tag']; ?></p>
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Kategori</label>
-                  <p class="form-control-static"><?php echo $artikel['id_kat']; ?></p>
-                </div>
-                <div class="form-group p-t-4">
-                  <label>Foto</label>
-                  <p class="form-control-static"><?php echo $artikel['foto_ar']; ?></p>
-                  <img src="<?php echo $artikel['foto_ar']; ?>" style="width: 300px;">
-                </div>
-                <div class="form-group p-t-4">
                   <label>Admin</label>
-                  <p class="form-control-static"><?php echo $artikel['id_adm']; ?></p>
+                  <p class="form-control-static"><?php echo $project['id_adm']; ?></p>
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Nama Client</label>
+                  <p class="form-control-static"><?php echo $project['nama_client_pro']; ?></p>
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Lokasi</label>
+                  <p class="form-control-static"><?php echo $project['lokasi_pro']; ?></p>
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Foto 1</label>
+                  <p class="form-control-static"><?php echo $project['img_1_pro']; ?></p>
+                  <img src="<?php echo $project['img_1_pro']; ?>" style="width: 300px;">
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Foto 2</label>
+                  <p class="form-control-static"><?php echo $project['img_2_pro']; ?></p>
+                  <img src="<?php echo $project['img_2_pro']; ?>" style="width: 300px;">
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Foto 3</label>
+                  <p class="form-control-static"><?php echo $project['img_3_pro']; ?></p>
+                  <img src="<?php echo $project['img_3_pro']; ?>" style="width: 300px;">
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Foto 4</label>
+                  <p class="form-control-static"><?php echo $project['img_4_pro']; ?></p>
+                  <img src="<?php echo $project['img_4_pro']; ?>" style="width: 300px;">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                    <a href="<?php echo site_url('Artikel_admin/edit/').$artikel['id_ar']; ?>" class="btn btn-info">Edit</a>
-                    <a href="<?php echo site_url('Artikel_admin/index'); ?>" class="btn btn-danger">Batal</a>
+                    <a href="<?php echo site_url('Project_admin/edit/').$project['id_pro']; ?>" class="btn btn-info">Edit</a>
+                    <a href="<?php echo site_url('Project_admin/index'); ?>" class="btn btn-danger">Batal</a>
                 </div>
               </div>
             </div>

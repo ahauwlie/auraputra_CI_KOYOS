@@ -65,7 +65,7 @@
                 ?>
                 <div class="form-group">
                     <label>Admin Id</label>
-                    <input name="id_adm" id="id_adm" value="<?php echo $id_adm; ?>" type="text" class="form-control" required>
+                    <input name="id_adm" id="id_adm" value="<?php echo $id_adm; ?>" type="text" class="form-control" readonly>
                 </div>
               </div>
               <div class="col-lg-6">

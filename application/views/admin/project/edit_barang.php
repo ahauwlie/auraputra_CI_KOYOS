@@ -19,11 +19,11 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Edit Artikel</h1>
+      <h1>Edit Project</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Tables</a></li>
-        <li class="active">Edit Artikel</li>
+        <li class="active">Edit Project</li>
       </ol>
     </section>
 
@@ -36,56 +36,62 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Judul Artikel</label>
-                    <input name="judul" id="judul" type="text" maxlength="100" class="form-control" value="<?php echo $artikel['judul_ar']; ?>" required>
+                    <label>Kategori</label>
+                    <input name="kategori" id="kategori" type="text" maxlength="100" class="form-control" value="<?php echo $project['kategori_pro']; ?>" required>
                 </div>
                 <div class="form-group">
-                    <label>Isi Artikel</label>
-                    <input name="isi" id="isi" type="text" class="form-control" value="<?php echo $artikel['isi_ar']; ?>" required>
+                    <label>Judul</label>
+                    <input name="judul" id="judul" type="text" maxlength="100" class="form-control" value="<?php echo $project['judul_pro']; ?>" required>
                 </div>
                 <div class="form-group">
-                    <label>Ayat Artikel</label>
-                    <input name="ayat" id="ayat" type="text" class="form-control" value="<?php echo $artikel['ayat_ar']; ?>" required>
+                    <label>Mini_text</label>
+                    <input name="mini_text" id="mini_text" type="text" class="form-control" value="<?php echo $project['mini_text_pro']; ?>" required>
                 </div>
-                <!-- <div class="form-group">
-                    <label>Tipe Barang</label>
-                    <select name="tipe" id="tipe" class="form-control select-search m-t-4" required>
-                      <option value="" disabled>Pilih kategori...</option>
-                      <option value="Kopi">Kopi</option>
-                      <option value="Filter">Filter</option>
-                      <option value="Kopi_1kg">Kopi_1kg</option>
-                      <option value="Biji_kopi">Biji_kopi</option>
-                      <option value="Alat_seduh">Alat_seduh</option>
-                      <option value="Mesin_Kopi">Mesin_Kopi</option>
-                    </select>
-                </div> -->
                 <div class="form-group">
                     <label>Tanggal</label>
-                    <input name="tanggal" id="tanggal" type="date" class="form-control" value="<?php echo $artikel['tanggal_ar']; ?>" required>
+                    <input name="tanggal" id="tanggal" type="date" class="form-control" value="<?php echo $project['tanggal_pro']; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label>Nama_Client</label>
+                    <input name="nama_client" id="nama_client" placeholder="boleh kosong" type="text" value="<?php echo $project['nama_client_pro']; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Lokasi</label>
+                    <input name="lokasi" id="lokasi" placeholder="boleh kosong" type="text" value="<?php echo $project['lokasi_pro']; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Admin Id</label>
+                    <input name="id_adm" id="id_adm" value="<?php echo $project['id_adm']; ?>" type="text" class="form-control" readonly>
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="form-group">
-                    <label>Kategori</label>
-                    <input name="kat" id="kat" class="form-control" value="<?php echo $artikel['id_kat']; ?>" required>
-                </div>
-                <div class="form-group">
-                    <label>Tag</label>
-                    <input name="tag" id="tag" class="form-control" value="<?php echo $artikel['id_tag']; ?>" required>
-                </div>
-                <div class="form-group">
+                <div class="form-group p-t-4">
                     <label>Foto Link</label>
-                    <input name="foto" id="foto" class="form-control" maxlength="255" value="<?php echo $artikel['foto_ar']; ?>" required>
+                    <input name="foto" id="foto" type="text" maxlength="255" value="<?php echo $project['img_1_pro']; ?>" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label>Admin</label>
-                    <input name="admin" id="admin" class="form-control" value="<?php echo $artikel['id_adm']; ?>" required>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 2</label>
+                    <input name="foto2" id="foto2" type="text" maxlength="255" value="<?php echo $project['img_2_pro']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 3</label>
+                    <input name="foto3" id="foto3" type="text" maxlength="255" value="<?php echo $project['img_3_pro']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                    <label>Foto Link 4</label>
+                    <input name="foto4" id="foto4" type="text" maxlength="255" value="<?php echo $project['img_4_pro']; ?>" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
+                  <label>Deskripsi</label>
+                  <div class="box-body pad">
+                    <textarea class="textarea" value="<?php echo $project['isi_pro']; ?>" name="isi" id="isi" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
                     <button class="btn btn-info">Edit</button>
-                    <a href="<?php echo site_url('Artikel_admin/index'); ?>" class="btn btn-danger">Batal</a>
+                    <a href="<?php echo site_url('Project_admin/index'); ?>" class="btn btn-danger">Batal</a>
                 </div>
               </div>
             </div>

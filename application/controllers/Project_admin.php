@@ -180,15 +180,19 @@ class project_admin extends CI_Controller
                 if ($_SERVER['REQUEST_METHOD'] == "POST")
                 {
                     $data = Array (
-                        'id_ar' => $id,
-                        'tanggal_ar' => $this->input->post('tanggal'),
-                        'id_kat' => $this->input->post('kat'),
-                        'judul_ar' => $this->input->post('judul'),
-                        'isi_ar' => $this->input->post('isi'),
-                        'ayat_ar' => $this->input->post('ayat'),
-                        'id_tag' => $this->input->post('tag'),
-                        'foto_ar' => $this->input->post('foto'),
-                        'id_adm' => $this->input->post('admin')
+                        'id_pro' => $id,
+                        'kategori_pro' => $this->input->post('kategori'),
+                        'judul_pro' => $this->input->post('judul'),
+                        'mini_text_pro' => $this->input->post('mini_text'),
+                        'tanggal_pro' => $this->input->post('tanggal'),
+                        'id_adm' => $this->input->post('id_adm'),
+                        'nama_client_pro' => $this->input->post('nama_client'),
+                        'lokasi_pro' => $this->input->post('lokasi'),
+                        'img_1_pro' => $this->input->post('foto'),
+                        'img_2_pro' => $this->input->post('foto2'),
+                        'img_3_pro' => $this->input->post('foto3'),
+                        'img_4_pro' => $this->input->post('foto4'),
+                        'isi_pro' => $this->input->post('isi')
                     );
 
                     $this->model_project->update(html_escape($data), $id, false);

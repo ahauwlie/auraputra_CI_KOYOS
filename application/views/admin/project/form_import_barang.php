@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Data Tables</title>
+  <title>Data Tables</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <?php echo $css; ?>
-  <link href="<?php echo base_url('inti/admin/sweetalert.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/admin/sweetalert.css'); ?>" rel="stylesheet">
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -26,12 +26,12 @@
     <section class="content-header">
       <h1>
         Form Import
-        <small>- Import Artikel</small>
+        <small>- Import Project</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Upload</a></li>
-        <li class="active">Import Artikel</li>
+        <li class="active">Import Project</li>
       </ol>
     </section>
 
@@ -42,7 +42,7 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <form method="post" action="<?php echo site_url("Artikel_import_admin/form") ?>" enctype="multipart/form-data">
+          <form method="post" action="<?php echo site_url("Project_import_admin/form") ?>" enctype="multipart/form-data">
             <a href="<?php echo base_url("excel/import_data.xlsx"); ?>"class="btn btn-primary"><i class="fa fa-download"></i> Download Format</a><br><br>
             <input id="pilih_file" type="file" name="file">
             <label for="pilih_file" class="form-group btn btn-info browse m-l-5">
@@ -60,63 +60,78 @@
                 die; 
               }
               
-              echo "<form method='post' action='".site_url("Artikel_import_admin/import")."'>";
+              echo "<form method='post' action='".site_url("Project_import_admin/import")."'>";
               
               echo "<table border='1' cellpadding='8'>
               <tr>
                 <th colspan='9'>Preview Data</th>
               </tr>
               <tr>
-                <th>Tanggal</th>
                 <th>Kategori</th>
                 <th>Judul</th>
-                <th>Isi</th>
-                <th>Ayat</th>
-                <th>Tag</th>
-                <th>Foto Link</th>
-                <th>Admin</th>
+                <th>Mini Text</th>
+                <th>Tanggal</th>
+                <th>Admin_id</th>
+                <th>Nama Client</th>
+                <th>Lokasi</th>
+                <th>Foto</th>
+                <th>Foto 2</th>
+                <th>Foto 3</th>
+                <th>Foto 4</th>
+                <th>Deskripsi</th>
               </tr>";
               
               $numrow = 1;
               $kosong = 0;
 
               foreach($sheet as $row){ 
-                $tanggal_ar = $row['A']; 
-                $id_kat = $row['B']; 
-                $judul_ar = $row['C']; 
-                $isi_ar = $row['D'];
-                $ayat_ar = $row['E']; 
-                $id_tag = $row['F']; 
-                $foto_ar = $row['G'];
-                $id_adm = $row['H'];
-
+                $kategory_pro = $row['A']; 
+                $judul_pro = $row['B']; 
+                $mini_text_pro = $row['C']; 
+                $tanggal_pro = $row['D'];
+                $id_adm = $row['E']; 
+                $nama_client_pro = $row['F']; 
+                $lokasi_pro = $row['G'];
+                $img_1_pro = $row['H'];
+                $img_2_pro = $row['I'];
+                $img_3_pro = $row['J'];
+                $img_4_pro = $row['K'];
+                $isi_pro = $row['L'];
                 
-                if(empty($tanggal_ar) && empty($id_kat) && empty($judul_ar) && empty($isi_ar) && empty($ayat_ar) && empty($id_tag) && empty($foto_ar) && empty($id_adm))
+                if(empty($kategory_pro) && empty($judul_pro) && empty($mini_text_pro) && empty($tanggal_pro) && empty($id_adm) && empty($nama_client_pro) && empty($lokasi) && empty($img_1_pro) && empty($img_2_pro) && empty($img_3_pro) && empty($img_4_pro) && empty($isi_pro))
                   continue;
                 
                 if($numrow > 1){
-                  $tanggal_ar_td = ( ! empty($tanggal_ar))? "" : " style='background: #E07171;'"; 
-                  $id_kat_td = ( ! empty($id_kat))? "" : " style='background: #E07171;'"; 
-                  $judul_ar_td = ( ! empty($judul_ar))? "" : " style='background: #E07171;'";
-                  $isi_ar_td = ( ! empty($isi_ar))? "" : " style='background: #E07171;'"; 
-                  $ayat_ar_td = ( ! empty($ayat_ar))? "" : " style='background: #E07171;'"; 
-                  $id_tag_td = ( ! empty($id_tag))? "" : " style='background: #E07171;'";
-                  $foto_ar_td = ( ! empty($foto_ar))? "" : " style='background: #E07171;'"; 
+                  $kategory_pro_td = ( ! empty($kategory_pro))? "" : " style='background: #E07171;'"; 
+                  $judul_pro_td = ( ! empty($judul_pro))? "" : " style='background: #E07171;'"; 
+                  $mini_text_pro_td = ( ! empty($mini_text_pro))? "" : " style='background: #E07171;'";
+                  $tanggal_pro_td = ( ! empty($tanggal_pro))? "" : " style='background: #E07171;'"; 
                   $id_adm_td = ( ! empty($id_adm))? "" : " style='background: #E07171;'"; 
+                  $nama_client_pro_td = ( ! empty($nama_client_pro))? "" : " style='background: #E07171;'";
+                  $lokasi_pro_td = ( ! empty($lokasi_pro))? "" : " style='background: #E07171;'"; 
+                  $img_1_pro_td = ( ! empty($img_1_pro))? "" : " style='background: #E07171;'"; 
+                  $img_2_pro_td = ( ! empty($img_2_pro))? "" : " style='background: #E07171;'"; 
+                  $img_3_pro_td = ( ! empty($img_3_pro))? "" : " style='background: #E07171;'"; 
+                  $img_4_pro_td = ( ! empty($img_4_pro))? "" : " style='background: #E07171;'"; 
+                  $isi_pro_td = ( ! empty($isi_pro))? "" : " style='background: #E07171;'"; 
                   
-                  if(empty($tanggal_ar) or empty($id_kat) or empty($judul_ar) or empty($isi_ar) or empty($ayat_ar) or empty($id_tag) or empty($foto_ar) or empty($id_adm) ){
+                  if(empty($kategory_pro) or empty($judul_pro) or empty($mini_text_pro) or empty($tanggal_pro) or empty($id_adm) or empty($nama_client_pro) or empty($lokasi_pro) or empty($img_1_pro) or empty($img_2_pro) or empty($img_3_pro) or empty($img_4_pro) or empty($isi_pro)){
                     $kosong++; 
                   }
                   
                   echo "<tr>";
-                  echo "<td".$tanggal_ar_td.">".$tanggal_ar."</td>";
-                  echo "<td".$id_kat_td.">".$id_kat."</td>";
-                  echo "<td".$judul_ar_td.">".$judul_ar."</td>";
-                  echo "<td".$isi_ar_td.">".$isi_ar."</td>";
-                  echo "<td".$ayat_ar_td.">".$ayat_ar."</td>";
-                  echo "<td".$id_tag_td.">".$id_tag."</td>";
-                  echo "<td".$foto_ar_td.">".$foto_ar."</td>";
+                  echo "<td".$kategory_pro_td.">".$kategory_pro."</td>";
+                  echo "<td".$judul_pro_td.">".$judul_pro."</td>";
+                  echo "<td".$mini_text_pro_td.">".$mini_text_pro."</td>";
+                  echo "<td".$tanggal_pro_td.">".$tanggal_pro."</td>";
                   echo "<td".$id_adm_td.">".$id_adm."</td>";
+                  echo "<td".$nama_client_pro_td.">".$nama_client_pro."</td>";
+                  echo "<td".$lokasi_pro_td.">".$lokasi_pro."</td>";
+                  echo "<td".$img_1_pro_td.">".$img_1_pro."</td>";
+                  echo "<td".$img_2_pro_td.">".$img_2_pro."</td>";
+                  echo "<td".$img_3_pro_td.">".$img_3_pro."</td>";
+                  echo "<td".$img_4_pro_td.">".$img_4_pro."</td>";
+                  echo "<td".$isi_pro_td.">".$isi_pro."</td>";
                   echo "</tr>";
                 }
                 
@@ -138,7 +153,7 @@
               }else{ 
                 echo "<hr>";
                 echo "<button type='submit' name='import'>Import</button>";
-                echo "<a href='".site_url("Artikel_import_admin")."'>Cancel</a>";
+                echo "<a href='".site_url("Project_import_admin")."'>Cancel</a>";
               }
               
               echo "</form>";
@@ -159,7 +174,7 @@
 <?php echo $js; ?>
 
 <!-- page script -->
-<script src="<?php echo base_url('inti/js/jquery-3.2.1.min.js'); ?>"></script>
+<script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
   
   <script>
   $(document).ready(function(){
