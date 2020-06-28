@@ -68,10 +68,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<?php  
+      	$session = $this->session->userdata('login');
+      	$id_adm = $session['id_adm'];
+      	$username = $session['username'];
+      	$nama_adm = $session['nama_adm'];
+      	$foto_adm = $session['foto_adm'];
+      	$moto_adm = $session['moto_adm'];
+      	$whatsapp = $session['whatsapp'];
+      	$instagram = $session['instagram'];
+      	$facebook = $session['facebook'];
+     	$twitter = $session['twitter'];
+     	$youtube = $session['youtube'];
+      	$active = $session['active'];
+    ?>
+	<h1>Welcome to <?php echo $nama_adm; ?>!</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<p>The page you are looking at is being generated dynamically by <?php echo $username; ?>.</p>
 
 		<p>If you would like to edit this page you'll find it located at:</p>
 		<code>application/views/welcome_message.php</code>
