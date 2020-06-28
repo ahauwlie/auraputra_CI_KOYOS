@@ -7,12 +7,12 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Project_admin extends CI_Controller
+class Blog_admin extends CI_Controller
 {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_project');
+        $this->load->model('model_blog');
     }
 
     public function index() {
@@ -29,13 +29,13 @@ class Project_admin extends CI_Controller
                 $data['js'] = $this->load->view('include/script1.php', NULL, TRUE);
                 $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
                 $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
-                $data['project'] = $this->model_project->getAll();
-                $this->load->view('admin/project/index', $data);
+                $data['blog'] = $this->model_blog->getAll();
+                $this->load->view('admin/blog/index', $data);
             }
         }
     }
 
-    public function addproject()
+    public function addblog()
     {
         $this->load->library('session');
         $this->load->helper('url');
@@ -77,39 +77,39 @@ class Project_admin extends CI_Controller
 
                     if($this->input->post('foto') == NULL || $this->input->post('foto2') == NULL || $this->input->post('foto3') == NULL || $this->input->post('foto4') == NULL){
                         $data = Array (
-                            'kategori_pro' => $this->input->post('kategori'),
-                            'judul_pro' => $this->input->post('judul'),
-                            'mini_text_pro' => $this->input->post('mini_text'),
-                            'tanggal_pro' => $this->input->post('tanggal'),
+                            'judul_blog' => $this->input->post('judul'),
+                            'tanggal_blog' => $this->input->post('tanggal'),
+                            'isi_blog' => $this->input->post('isi'),
+                            'kategori_blog' => $this->input->post('kategori'),
+                            'quotes_blog' => $this->input->post('quotes'),
+                            'quotes_author_blog' => $this->input->post('quotes_author'),
+                            'img_1_blog' => $pict,
+                            'img_2_blog' => $pict2,
+                            'img_3_blog' => $pict3,
+                            'img_4_blog' => $pict4,
                             'id_adm' => $this->input->post('id_adm'),
-                            'nama_client_pro' => $this->input->post('nama_client'),
-                            'lokasi_pro' => $this->input->post('lokasi'),
-                            'img_1_pro' => $pict,
-                            'img_2_pro' => $pict2,
-                            'img_3_pro' => $pict3,
-                            'img_4_pro' => $pict4,
-                            'isi_pro' => $this->input->post('isi')
+                            'NULL' => $this->input->post('NULL')                                  
                         );
                     }
                     else{
                         $data = Array (
-                            'kategori_pro' => $this->input->post('kategori'),
-                            'judul_pro' => $this->input->post('judul'),
-                            'mini_text_pro' => $this->input->post('mini_text'),
-                            'tanggal_pro' => $this->input->post('tanggal'),
+                            'judul_blog' => $this->input->post('judul'),
+                            'tanggal_blog' => $this->input->post('tanggal'),
+                            'isi_blog' => $this->input->post('isi'),
+                            'kategori_blog' => $this->input->post('kategori'),
+                            'quotes_blog' => $this->input->post('quotes'),
+                            'quotes_author_blog' => $this->input->post('quotes_author'),
+                            'img_1_blog' => $this->input->post('foto'),
+                            'img_2_blog' => $this->input->post('foto2'),
+                            'img_3_blog' => $this->input->post('foto3'),
+                            'img_4_blog' => $this->input->post('foto4'),
                             'id_adm' => $this->input->post('id_adm'),
-                            'nama_client_pro' => $this->input->post('nama_client'),
-                            'lokasi_pro' => $this->input->post('lokasi'),
-                            'img_1_pro' => $this->input->post('foto'),
-                            'img_2_pro' => $this->input->post('foto2'),
-                            'img_3_pro' => $this->input->post('foto3'),
-                            'img_4_pro' => $this->input->post('foto4'),
-                            'isi_pro' => $this->input->post('isi')
+                            'NULL' => $this->input->post('NULL')    
                         );
                     }                    
 
-                    $this->model_project->insert(html_escape($data), false);
-                    redirect(site_url("project_admin/index"));
+                    $this->model_blog->insert(html_escape($data), false);
+                    redirect(site_url("blog_admin/index"));
                 }
                 else
                 {
@@ -118,7 +118,7 @@ class Project_admin extends CI_Controller
                     $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
                     $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
 
-                    $this->load->view('admin/project/add_barang', $data);
+                    $this->load->view('admin/blog/add_barang', $data);
                 }
             }
         }
@@ -159,9 +159,9 @@ class Project_admin extends CI_Controller
             if($this->session->userdata('login')) {
                 $session = $this->session->userdata('login');
                 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-                    $this->model_project->delete($id);
+                    $this->model_blog->delete($id);
                 }
-                redirect(site_url('project_admin/index'));
+                redirect(site_url('blog_admin/index'));
             }
         }
     }
@@ -180,23 +180,23 @@ class Project_admin extends CI_Controller
                 if ($_SERVER['REQUEST_METHOD'] == "POST")
                 {
                     $data = Array (
-                        'id_pro' => $id,
-                        'kategori_pro' => $this->input->post('kategori'),
-                        'judul_pro' => $this->input->post('judul'),
-                        'mini_text_pro' => $this->input->post('mini_text'),
-                        'tanggal_pro' => $this->input->post('tanggal'),
+                        'id_blog' => $id,
+                        'judul_blog' => $this->input->post('judul'),
+                        'tanggal_blog' => $this->input->post('tanggal'),
+                        'isi_blog' => $this->input->post('isi'),
+                        'kategori_blog' => $this->input->post('kategori'),
+                        'quotes_blog' => $this->input->post('quotes'),
+                        'quotes_author_blog' => $this->input->post('quotes_author'),
+                        'img_1_blog' => $this->input->post('foto'),
+                        'img_2_blog' => $this->input->post('foto2'),
+                        'img_3_blog' => $this->input->post('foto3'),
+                        'img_4_blog' => $this->input->post('foto4'),                        
                         'id_adm' => $this->input->post('id_adm'),
-                        'nama_client_pro' => $this->input->post('nama_client'),
-                        'lokasi_pro' => $this->input->post('lokasi'),
-                        'img_1_pro' => $this->input->post('foto'),
-                        'img_2_pro' => $this->input->post('foto2'),
-                        'img_3_pro' => $this->input->post('foto3'),
-                        'img_4_pro' => $this->input->post('foto4'),
-                        'isi_pro' => $this->input->post('isi')
+                        'NULL' => $this->input->post('NULL')    
                     );
 
-                    $this->model_project->update(html_escape($data), $id, false);
-                    redirect(site_url("project_admin/index"));
+                    $this->model_blog->update(html_escape($data), $id, false);
+                    redirect(site_url("blog_admin/index"));
                 }
                 else
                 {
@@ -204,8 +204,8 @@ class Project_admin extends CI_Controller
                     $data['js'] = $this->load->view('include/script1.php', NULL, TRUE);
                     $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
                     $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
-                    $data['project'] = $this->model_project->getSpecified($id);
-                    $this->load->view('admin/project/edit_barang', $data);
+                    $data['blog'] = $this->model_blog->getSpecified($id);
+                    $this->load->view('admin/blog/edit_barang', $data);
                 }
             }
         }
@@ -227,8 +227,8 @@ class Project_admin extends CI_Controller
                 $data['footer'] = $this->load->view('layout/admin_footer.php', NULL, TRUE);
                 $data['preloader'] = $this->load->view('layout/admin_sidebar.php', NULL, TRUE);
 
-                $data['project'] = $this->model_project->getSpecified($id);
-                $this->load->view('admin/project/detail_barang', $data);
+                $data['blog'] = $this->model_blog->getSpecified($id);
+                $this->load->view('admin/blog/detail_barang', $data);
             }
         }
     }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Data Tables</title>
+  <title>Data Tables</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <?php echo $css; ?>
@@ -28,7 +28,7 @@
     <section class="content-header">
       <h1>
         Data Tables
-        <small>- Daftar Artikel</small>
+        <small>- Daftar blog</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -42,39 +42,45 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <a href="<?php echo site_url('Artikel_admin/addArtikel') ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Tambah Artikel</a>
+          <a href="<?php echo site_url('blog_admin/addblog') ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Tambah blog</a>
           <table id="productTable" class="table-bordered table-hover" style="table-layout: auto; width: 100%; ">
             <thead>
             <tr>
               <th>Id</th>
-              <th>Tanggal</th>
-              <th>Kategori</th>
               <th>Judul</th>
+              <th>Tanggal</th>
               <th>Isi</th>
-              <th>Ayat</th>
-              <th>Tag</th>
+              <th>Kategori</th>
+              <th>Quotes</th>
+              <th>Quotes Author</th>
               <th>Foto</th>
+              <th>Foto2</th>
+              <th>Foto3</th>
+              <th>Foto4</th>
               <th>Admin</th>
               <th>Aksi</th>
             </tr>
             </thead>
             <tbody>
             <?php
-              foreach ($artikel as $row) {
+              foreach ($blog as $row) {
                   echo "<tr>";
-                  echo "<td>".$row['id_ar']."</td>";
-                  echo "<td>".$row['tanggal_ar']."</td>";
-                  echo "<td>".$row['id_kat']."</td>";
-                  echo "<td>".$row['judul_ar']."</td>";
-                  echo "<td>".$row['isi_ar']."</td>";
-                  echo "<td>".$row['ayat_ar']."</td>";
-                  echo "<td>".$row['id_tag']."</td>";
-                  echo "<td>".$row['foto_ar']."</td>";
+                  echo "<td>".$row['id_blog']."</td>";
+                  echo "<td>".$row['judul_blog']."</td>";
+                  echo "<td>".$row['tanggal_blog']."</td>";
+                  echo "<td>".$row['isi_blog']."</td>";
+                  echo "<td>".$row['kategori_blog']."</td>";
+                  echo "<td>".$row['quotes_blog']."</td>";
+                  echo "<td>".$row['quotes_author_blog']."</td>";
+                  echo "<td>".$row['img_1_blog']."</td>";
+                  echo "<td>".$row['img_2_blog']."</td>";
+                  echo "<td>".$row['img_3_blog']."</td>";
+                  echo "<td>".$row['img_4_blog']."</td>";
                   echo "<td>".$row['id_adm']."</td>";
                   echo "<td class='text-center'>";
-                  echo "      <a href='".site_url('Artikel_admin/edit/').$row['id_ar']."'><i class='fa fa-pencil'></i></a> ";
-                  echo "      <a href='".site_url('Artikel_admin/detail/').$row['id_ar']."'><i class='fa fa-eye'></i></a> ";
-                  echo "      <a href='#' data-id='".$row['id_ar']."' data-name='".$row['judul_ar']."' class='sweet-confirm'><i class='fa fa-trash'></i></a>";
+                  echo "      <a href='".site_url('blog_admin/edit/').$row['id_blog']."'><i class='fa fa-pencil'></i></a> ";
+                  echo "      <a href='".site_url('blog_admin/detail/').$row['id_blog']."'><i class='fa fa-eye'></i></a> ";
+                  echo "      <a href='#' data-id='".$row['id_blog']."' data-name='".$row['judul_blog']."' class='sweet-confirm'><i class='fa fa-trash'></i></a>";
                   echo "</td>";
                   echo "</tr>";
               }
@@ -82,14 +88,17 @@
             </tbody>
             <tfoot>
             <tr>
-             <th>Id</th>
-              <th>Tanggal</th>
-              <th>Kategori</th>
+              <th>Id</th>
               <th>Judul</th>
+              <th>Tanggal</th>
               <th>Isi</th>
-              <th>Ayat</th>
-              <th>Tag</th>
+              <th>Kategori</th>
+              <th>Quotes</th>
+              <th>Quotes Author</th>
               <th>Foto</th>
+              <th>Foto2</th>
+              <th>Foto3</th>
+              <th>Foto4</th>
               <th>Admin</th>
               <th>Aksi</th>
             </tr>
@@ -161,7 +170,7 @@
                     closeOnConfirm: true
                 },
                 function(){
-                    $('#delete-form').attr('action', '<?php echo site_url('Artikel_admin/delete/'); ?>' + id).submit();
+                    $('#delete-form').attr('action', '<?php echo site_url('blog_admin/delete/'); ?>' + id).submit();
                 });
         });
     })

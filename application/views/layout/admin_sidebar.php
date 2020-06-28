@@ -101,6 +101,19 @@
           <li><a href="<?php echo site_url('Project_import_admin'); ?>"><i class="fa fa-circle-o"></i> Unggah Banyak Project</a></li>
         </ul>
       </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-table"></i>
+          <span>Blog</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="<?php echo site_url('Blog_admin'); ?>"><i class="fa fa-circle-o"></i> Daftar Blog</a></li>
+          <li><a href="<?php echo site_url('Blog_import_admin'); ?>"><i class="fa fa-circle-o"></i> Unggah Banyak Blog</a></li>
+        </ul>
+      </li>
       <li><a href="<?php echo site_url('User_manage_admin'); ?>"><i class="fa fa-user-circle-o"></i> <span> Kelola Admin</span></a></li>
       <li><a href="<?php echo site_url('Home'); ?>"><i class="fa fa-bug"></i> <span> Tampilan User</span></a></li>
     </ul>
