@@ -56,6 +56,7 @@
               <th>IG</th>
               <th>FB</th>
               <th>Twitter</th>
+              <th>Youtube</th>
               <th>Aktifasi</th>
               <th>Aksi</th>
             </tr>
@@ -74,6 +75,7 @@
                   echo "<td>".$row['instagram']."</td>";
                   echo "<td>".$row['facebook']."</td>";
                   echo "<td>".$row['twitter']."</td>";
+                  echo "<td>".$row['youtube']."</td>";
                   echo "<td>".$row['active']."</td>";
                   echo "<td class='text-center'>";
                   echo "      <a href='".site_url('User_manage_admin/edit/').$row['id_adm']."'><i class='fa fa-pencil'></i></a> ";
@@ -96,6 +98,7 @@
               <th>IG</th>
               <th>FB</th>
               <th>Twitter</th>
+              <th>Youtube</th>
               <th>Aktifasi</th>
               <th>Aksi</th>
             </tr>

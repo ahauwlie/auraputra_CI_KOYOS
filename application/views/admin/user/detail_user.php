@@ -75,6 +75,10 @@
                     <p class="form-control-static"><?php echo $user['twitter']; ?></p>
                 </div>
                 <div class="form-group">
+                    <label>Youtube</label>
+                    <p class="form-control-static"><?php echo $user['youtube']; ?></p>
+                </div>
+                <div class="form-group">
                     <label>Status Aktifasi</label>
                     <p class="form-control-static"><?php echo $user['active']; ?></p>
                 </div>

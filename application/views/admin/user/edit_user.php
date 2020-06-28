@@ -59,7 +59,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                     <label>Whatsapp</label>
-                    <input name="wa" id="wa" type="number" class="form-control" value="<?php echo $user['whatsapp']; ?>" required>
+                    <input name="wa" id="wa" type="number" class="form-control" value="<?php echo $user['whatsapp']; ?>">
                 </div>
                 <div class="form-group">
                     <label>Instagram</label>
@@ -72,6 +72,10 @@
                 <div class="form-group">
                     <label>Twitter</label>
                     <input name="tw" id="tw" type="text" maxlength="255" class="form-control" value="<?php echo $user['twitter']; ?>">
+                </div>
+                <div class="form-group">
+                    <label>Youtube</label>
+                    <input name="yt" id="yt" type="text" maxlength="255" class="form-control" value="<?php echo $user['youtube']; ?>">
                 </div>
                 <div class="form-group">
                     <label>Status Aktifasi</label>

@@ -78,6 +78,10 @@
                     <input name="tw" id="tw" type="text" maxlength="255" class="form-control">
                 </div>
                 <div class="form-group p-t-4">
+                    <label>Youtube</label>
+                    <input name="yt" id="yt" type="text" maxlength="255" class="form-control">
+                </div>
+                <div class="form-group p-t-4">
                     <label>Aktifasi</label>
                     <input name="active" id="active" type="number" maxlength="1" class="form-control" required>
                 </div>
