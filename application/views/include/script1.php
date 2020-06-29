@@ -16,4 +16,4 @@
 <script src="<?php echo base_url('/inti/admin/js/demo.js') ?>"></script>
 <script src="<?php echo base_url('/inti/admin/js/jquery.dataTables.js') ?>"></script>
 <script src="<?php echo base_url('/inti/admin/js/dataTables.bootstrap.js') ?>"></script>
-<script src="<?php echo base_url('/inti/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') ?>"></script>
+<script src="<?php echo base_url('/inti/admin/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js') ?>"></script>

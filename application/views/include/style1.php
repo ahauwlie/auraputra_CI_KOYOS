@@ -9,4 +9,4 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('/inti/admin/bootstrap3-wysihtml5.min.css'); ?>">
 <!-- datatable -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('/inti/admin/dataTables.bootstrap.css'); ?>">
-<link rel="stylesheet" href="<?php echo base_url('/inti/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'); ?>">
+<link rel="stylesheet" href="<?php echo base_url('/inti/admin/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'); ?>">
