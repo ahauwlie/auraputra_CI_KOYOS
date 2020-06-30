@@ -32,46 +32,29 @@
 			<main>
 				<div class="single-post">
 					<div class="parallax-image single-post__head">
-						<div data-rellax-speed="-3" data-rellax-percentage="0.5" style="background-image:url(../inti/img/zoom-image-head-bg.jpg)" class="parallax-image__image"></div>
+						<div data-rellax-speed="-3" data-rellax-percentage="0.5" style="background-image:url(<?php echo $lol['img_1_blog']; ?>)" class="parallax-image__image"></div>
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-12 col-lg-8 offset-lg-2">
 								<div class="single-post__header">
-									<a href="#" class="single-post__category">Kategori</a>
-									<div class="single-post__date">Tanggal</div>
+									<a href="#" class="single-post__category"><?php echo $lol['kategori_blog']; ?></a>
+									<div class="single-post__date"><?php echo $lol['tanggal_blog']; ?></div>
 								</div>
-								<div class="single-post__title">Judul</div>
+								<div class="single-post__title"><?php echo $lol['judul_blog']; ?></div>
 								<blockquote class="quote single-post__quote">
-									<div class="quote__text">ceritanya ini quotes.</div>
-									<div class="quote__name">Nama</div>
+									<div class="quote__text"><?php echo $lol['quotes_blog']; ?></div>
+									<div class="quote__name"><?php echo $lol['quotes_author_blog']; ?></div>
 								</blockquote>
 								<div class="single-post__text">
-									<p style="text-indent: 50px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-									</p>
+									<?php echo $lol['isi_blog']; ?>
 								</div>
 							</div>
 						</div>
 						<div class="single-post__images row">
-							<div class="col-12"><img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" class="single-post__image" /></div>
-							<div class="col-6"><img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" class="single-post__image" /></div>
-							<div class="col-6"><img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" class="single-post__image" /></div>
-						</div>
-						<div class="row">
-							<div class="col-12 col-lg-8 offset-lg-2">
-								<div class="single-post__links">
-									<div class="single-post__links-title">Share:</div>
-									<a href="#" class="single-post__links-item single-post__links-item_iconed icofont-facebook">
-										<div class="visually-hidden">Facebook</div>
-									</a>
-									<a href="#" class="single-post__links-item single-post__links-item_iconed icofont-twitter">
-										<div class="visually-hidden">Twitter</div>
-									</a>
-									<a href="#" class="single-post__links-item single-post__links-item_iconed icofont-pinterest">
-										<div class="visually-hidden">Pinterest</div>
-									</a>
-								</div>
-							</div>
+							<div class="col-12"><img src="<?php echo $lol['img_3_blog']; ?>" alt="" class="single-post__image" /></div>
+							<div class="col-6"><img src="<?php echo $lol['img_2_blog']; ?>" alt="" class="single-post__image" /></div>
+							<div class="col-6"><img src="<?php echo $lol['img_4_blog']; ?>" alt="" class="single-post__image" /></div>
 						</div>
 						<div class="person-block single-post__author">
 							<img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" class="person-block__image" />
@@ -88,27 +71,9 @@
 							<div class="row">
 								<div class="col-12 col-lg-8 offset-lg-2">
 									<div class="comments__title heading-smallest">Comments</div>
-									<div class="comments__list">
-										<div class="comment-card">
-											<img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" class="comment-card__image" />
-											<div class="comment-card__content">
-												<div class="comment-card__head">
-													<div class="comment-card__name">Nama</div>
-													<div class="comment-card__date">Tanggal</div>
-												</div>
-												<div class="comment-card__text">isi comment</div>
-											</div>
-										</div>
-									</div>
+									<?php echo $comments; ?>
 									<div class="comments__title heading-smallest">leave a comment</div>
-									<form>
-										<div class="row">
-											<div class="col-12 col-lg-6"><input type="text" name="name" placeholder="Name" class="comments__input-text" /></div>
-											<div class="col-12 col-lg-6"><input type="text" name="email" placeholder="Email" class="comments__input-text" /></div>
-											<div class="col-12"><input type="text" name="subject" placeholder="Subject (Optinal)" class="comments__input-text" /></div>
-											<div class="col-12"><textarea name="message" placeholder="Message" class="comments__input-textarea"></textarea><button class="comments__submit">Post Comment</button></div>
-										</div>
-									</form>
+									<a href="<?php echo site_url('nyoba/index/'.$lol['id_blog']); ?>" class="btn btn-success">Comment disini</a>
 								</div>
 							</div>
 						</div>

@@ -55,27 +55,15 @@
 							</div>
 						</div>
 						<div class="masonry__grid masonry-block__grid row">
-							<div class="masonry__item masonry-block__item col-12 col-sm-6 col-lg-4">
-								<a href="<?php echo site_url('project/detail'); ?>" class="masonry-item" data-filters="1">
-									<div class="masonry-item__image-wrapper"><img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" class="masonry-item__image" /></div>
-									<span class="masonry-item__title">Judul</span>
-									<span class="masonry-item__category">Kategory</span>
-								</a>
-							</div>
-							<div class="masonry__item masonry-block__item col-12 col-sm-6 col-lg-4">
-								<a href="<?php echo site_url('project/detail'); ?>" class="masonry-item" data-filters="1">
-									<div class="masonry-item__image-wrapper"><img src="<?php echo base_url('/inti/img/studio-post-image-2.jpg'); ?>" alt="" class="masonry-item__image" /></div>
-									<span class="masonry-item__title">Judul</span>
-									<span class="masonry-item__category">Kategory</span>
-								</a>
-							</div>
-							<div class="masonry__item masonry-block__item-block col-12 col-sm-6 col-lg-4">
-								<a href="<?php echo site_url('project/detail'); ?>" class="masonry-item" data-filters="2">
-									<div class="masonry-item__image-wrapper"><img src="<?php echo base_url('/inti/img/studio-post-image-3.jpg'); ?>" alt="" class="masonry-item__image" /></div>
-									<span class="masonry-item__title">Judul</span>
-									<span class="masonry-item__category">Kategory</span>
-								</a>
-							</div>
+							<?php foreach ($pro as $row) : ?>
+								<div class="masonry__item masonry-block__item col-12 col-sm-6 col-lg-4">
+									<a href="<?php echo site_url('project/detail/'.$row->id_pro); ?>" class="masonry-item" data-filters="1">
+										<div class="masonry-item__image-wrapper"><img src="<?=  $row->img_1_pro  ?>" alt="" class="masonry-item__image" /></div>
+										<span class="masonry-item__title"><?=  $row->judul_pro  ?></span>
+										<span class="masonry-item__category"><?=  $row->kategori_pro  ?></span>
+									</a>
+								</div>
+							<?php endforeach; ?>
 						</div>
 					</div>
 					<div class="show-more">

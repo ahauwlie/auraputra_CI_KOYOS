@@ -31,22 +31,22 @@
 			<main>
 				<div class="main-slide main-slide main-slide_size_large">
 					<div class="parallax-image main-slide__image">
-						<div data-rellax-speed="-3" data-rellax-percentage="0.5" style="background-image:url(../inti/img/zoom-image-head-bg.jpg)" class="parallax-image__image"></div>
+						<div data-rellax-speed="-3" data-rellax-percentage="0.5" style="background-image: url(<?php echo $lol['img_4_pro']; ?>);" class="parallax-image__image"></div>
 					</div>
 					<div class="main-slide__container container" style="color: black;">
 						<div class="main-slide__slide-inner">
 							<div class="main-slide__subtitle-wrapper">
-								<div class="main-slide__subtitle">Kategory</div>
+								<div class="main-slide__subtitle"><?php echo $lol['kategori_pro']; ?></div>
 							</div>
 							<div class="main-slide__title-wrapper">
-								<div class="main-slide__title">Judul,<br> Judul</div>
+								<div class="main-slide__title"><?php echo $lol['judul_pro']; ?></div>
 								<div class="main-slide__label-wrapper">
 									<div class="main-slide__label">Telah selesai pada</div>
-									<div class="main-slide__label-value">Tanggal</div>
+									<div class="main-slide__label-value"><?php echo $lol['tanggal_pro']; ?></div>
 								</div>
 							</div>
 							<div class="main-slide__text-wrapper">
-								<div class="main-slide__text">sedikit kata" aja nihh</div>
+								<div class="main-slide__text"><?php echo $lol['mini_text_pro']; ?></div>
 							</div>
 						</div>
 					</div>
@@ -57,30 +57,29 @@
 						<div class="project-detail__head-items">
 							<div class="row">
 								<div class="col-12 col-lg-4">
-									<div class="project-detail__head-item"><strong>Location:</strong> </div>
-									<div class="project-detail__head-item"><strong>Client:</strong> </div>
+									<div class="project-detail__head-item"><strong>Location: <?php echo $lol['lokasi_pro']; ?></strong> </div>
+									<div class="project-detail__head-item"><strong>Client: <?php echo $lol['nama_client_pro']; ?></strong> </div>
 								</div>
 								<div class="col-12 col-lg-4">
-									<div class="project-detail__head-item"><strong>Completed:</strong> </div>
-									<div class="project-detail__head-item"><strong>Author:</strong> </div>
+									<div class="project-detail__head-item"><strong>Completed: <?php echo $lol['tanggal_pro']; ?></strong> </div>
+									<div class="project-detail__head-item"><strong>Author: <?php echo $lol['id_adm']; ?></strong> </div>
 								</div>
 								<div class="col-12 col-lg-4">
 									<div class="project-detail__head-item"><strong>Bebas:</strong> bebas</div>
-									<div class="project-detail__head-item"><strong>Share:</strong> <a href="#" class="project-detail__head-item-link project-detail__head-item-link_twitter">Twitter</a> - <a href="#" class="project-detail__head-item-link project-detail__head-item-link_facebook">Facebook</a> - <a href="#" class="project-detail__head-item-link project-detail__head-item-link_google">Google Plus</a> - <a href="#" class="project-detail__head-item-link project-detail__head-item-link_rss">RSS</a></div>
+									<div class="project-detail__head-item"><strong>Bebas:</strong> bebas</div>
 								</div>
 							</div>
 						</div>
-						<div class="project-detail__title">Judul</div>
+						<div class="project-detail__title"><?php echo $lol['judul_pro']; ?></div>
 						<div class="project-detail__text" style="text-indent: 50px;">
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-						</div>
+							<p><?php echo $lol['isi_pro']; ?></p>
 						<div class="simple-slider">
 							<button type="button" class="simple-slider__control simple-slider__control_prev icon-chevron-left"><span class="visually-hidden">prev</span></button><button type="button" class="simple-slider__control simple-slider__control_next icon-chevron-right"><span class="visually-hidden">next</span></button>
 							<div class="simple-slider__slider swiper-container">
 								<div class="swiper-wrapper">
-									<div class="simple-slider__slide swiper-slide"><img src="<?php echo base_url('/inti/img/studio-post-image-1.jpg'); ?>" alt="" /></div>
-									<div class="simple-slider__slide swiper-slide"><img src="<?php echo base_url('/inti/img/studio-post-image-2.jpg'); ?>" alt="" /></div>
-									<div class="simple-slider__slide swiper-slide"><img src="<?php echo base_url('/inti/img/studio-post-image-3.jpg'); ?>" alt="" /></div>
+									<div class="simple-slider__slide swiper-slide"><img src="<?php echo $lol['img_1_pro']; ?>" alt="" /></div>
+									<div class="simple-slider__slide swiper-slide"><img src="<?php echo $lol['img_3_pro']; ?>" alt="" /></div>
+									<div class="simple-slider__slide swiper-slide"><img src="<?php echo $lol['img_2_pro']; ?>" alt="" /></div>
 								</div>
 								<div class="swiper-pagination"></div>
 							</div>
