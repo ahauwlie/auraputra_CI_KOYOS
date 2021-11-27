@@ -1191,7 +1191,7 @@ main {
 }
 
 .counter-block__item {
-	margin-bottom: 46px
+	margin-bottom: 32px
 }
 
 .counter-block__item-value {
@@ -1199,6 +1199,57 @@ main {
 	font-size: 100px;
 	line-height: 1;
 	margin-bottom: 11px
+}
+
+.counter-block_2_item-value {
+	font-family: teko, Helvetica, sans-serif;
+	font-size: 86px;
+	line-height: 1;
+	margin-bottom: 11px;
+    background: linear-gradient(to right, #4d4d4d 0, #fff 5%, #4d4d4d 50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+}
+
+@-moz-keyframes shine {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
 }
 
 .counter-block__item-text {
