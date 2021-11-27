@@ -36,9 +36,9 @@
                         </div>
                         <img src="<?php echo base_url('/inti/img/zoom-image-head-bg2.png'); ?>" alt="" class="zoom-image-head__bg2" />
                         <div class="zoom-image-head__content container">
-                            <div class="zoom-image-head__subtitle">Hello from Aura Putra Wijaya</div>
-                            <div class="zoom-image-head__title">Isi apa hayooo<br />Isi apa hayooo</div>
-                            <div class="zoom-image-head__text">Isi apa hayooo<br />Isi apa hayooo</div>
+                            <div class="zoom-image-head__subtitle">Hello from</div>
+                            <div class="zoom-image-head__title">Aura Putra<br />Wijaya</div>
+                            <div class="zoom-image-head__text">karena bagi kami, kualitas adalah<br /><b>prioritas</b></div>
                             <div class="zoom-image-head__icon icofont-dotted-down"></div>
                         </div>
                     </div>
@@ -48,19 +48,34 @@
                         <div class="zoom-counter__inner">
                             <div style="background-image:url(inti/img/zoom-count-bg.jpg)" class="zoom-counter__card">
                                 <div class="zoom-counter__card-title">
-                                    <p>since</p>
-                                    <p>2019</p>
+                                    <p>Sejak</p>
+                                    <p>2005</p>
                                 </div>
-                                <div data-counter-value="1" class="zoom-counter__card-value js-counter">1</div>
-                                <div class="zoom-counter__card-description">years<br />experience</div>
+                                <div data-counter-value="16" class="zoom-counter__card-value js-counter">16</div>
+                                <div class="zoom-counter__card-description">Tahun<br />Kami Melayani</div>
                             </div>
                             <div class="zoom-counter__info">
                                 <div class="zoom-counter__subtitle">Aura Studio</div>
-                                <div class="zoom-counter__title">isi apa hayooo<br />isi apa hayooo</div>
+                                <div class="zoom-counter__title">Produksi Kami</div>
                                 <div class="zoom-counter__text">
-                                    <p style="text-indent: 50px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <p style="text-indent: 50px;">Perusahaan kami menggunakan peralatan
+                                        produksi yang lengkap dan terbaik
+                                        berikut dengan tenaga kerja yang terlatih dan
+                                        juga terampil.
+                                    </p>
+                                    <p style="text-indent: 50px;">Dari proses pra-produksi
+                                        sampai packing kami selalu
+                                        mengawasi setiap prosesnya
+                                        sehingga kualitas produk yang dihasilkan
+                                        perusahaan kami selalu
+                                        yang terbaik.
+                                    </p>
+                                    <p style="text-indent: 50px;">Setiap produk yang kami produksi selalu
+                                    dibuat berdasarkan pengalaman pengguna.
+                                    Sehingga kenyamanan dan estetika dari produk
+                                    kami dijamin yang terbaik di kelasnya.</p>
                                 </div>
-                                <a href="#" class="zoom-counter__read-more zoom-counter__read-more_inverted">more about us</a>
+                                <a href="#" class="zoom-counter__read-more zoom-counter__read-more_inverted">Klik disini untuk lebih lanjut</a>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@
                 <ul class="top-menu header-fixed__menu">
                     <li class="top-menu__menu-item">
                         <div class="dropdown">
-                            <a href="<?php echo site_url('home'); ?>" class="dropdown__trigger top-menu__menu-link">Home</a>
+                            <a href="<?php echo site_url('home'); ?>" class="dropdown__trigger top-menu__menu-link">Beranda</a>
                         </div>
                     </li>
                     <li class="top-menu__menu-item">
@@ -46,7 +46,7 @@
             <button type="button" class="header__menu-button header__menu-button_fixed"><span class="header__menu-button-inner"></span></button>
             <div class="menu-panel__menu">
                 <div class="menu-panel__menu-item">
-                    <a href="<?php echo site_url('home'); ?>" data-toggle="collapse" class="menu-panel__menu-link menu-panel__menu-link menu-panel__menu-link_active">Home</a>
+                    <a href="<?php echo site_url('home'); ?>" data-toggle="collapse" class="menu-panel__menu-link menu-panel__menu-link menu-panel__menu-link_active">Beranda</a>
                 </div>
                 <div class="menu-panel__menu-item">
                     <a href="<?php echo site_url('home/service'); ?>" data-toggle="collapse" class="menu-panel__menu-link collapsed">Services</a>
