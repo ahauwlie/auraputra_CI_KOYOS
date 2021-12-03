@@ -102,7 +102,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="cards__item col-12 col-md-6 col-xl-3">
-								<a style="background-image: url(../inti/img/zoom-slide-image-1.jpg)" href="#" class="cards__item-inner">
+								<a style="background-image: url(../inti/img/project/DSC02382.jpg)" href="#" class="cards__item-inner">
 								<span class="cards__item-content">
 								<span class="cards__item-index">01</span>
 								<span class="cards__item-title">Isi apa hayooooo</span>
@@ -111,7 +111,7 @@
 								</a>
 							</div>
 							<div class="cards__item col-12 col-md-6 col-xl-3">
-								<a style="background-image: url(../inti/img/zoom-slide-image-2.jpg)" href="#" class="cards__item-inner">
+								<a style="background-image: url(../inti/img/project/DSC02413.jpg)" href="#" class="cards__item-inner">
 								<span class="cards__item-content">
 								<span class="cards__item-index">02</span>
 								<span class="cards__item-title">Isi apa hayooooo</span>
@@ -120,7 +120,7 @@
 								</a>
 							</div>
 							<div class="cards__item col-12 col-md-6 col-xl-3">
-								<a style="background-image: url(../inti/img/zoom-slide-image-3.jpg)" href="#" class="cards__item-inner">
+								<a style="background-image: url(../inti/img/project/DSC01129.jpg)" href="#" class="cards__item-inner">
 								<span class="cards__item-content">
 								<span class="cards__item-index">03</span>
 								<span class="cards__item-title">Isi apa hayooooo</span>
@@ -129,7 +129,7 @@
 								</a>
 							</div>
 							<div class="cards__item col-12 col-md-6 col-xl-3">
-								<a style="background-image: url(../inti/img/zoom-slide-image-4.jpg)" href="#" class="cards__item-inner">
+								<a style="background-image: url(../inti/img/project/DSC02415.jpg)" href="#" class="cards__item-inner">
 								<span class="cards__item-content">
 								<span class="cards__item-index">04</span>
 								<span class="cards__item-title">Isi apa hayooooo</span>

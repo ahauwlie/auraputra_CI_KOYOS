@@ -32,9 +32,9 @@
                 <div class="zoom-image-head">
                     <div class="zoom-image-head__body">
                         <div class="zoom-image-head__bg">
-                            <div style="background-image:url(inti/img/zoom-image-head-bg.jpg)" class="zoom-image-head__bg-inner"></div>
+                            <div style="background-image:url(inti/img/Bckground.png)" class="zoom-image-head__bg-inner"></div>
                         </div>
-                        <img src="<?php echo base_url('/inti/img/zoom-image-head-bg2.png'); ?>" alt="" class="zoom-image-head__bg2" />
+                        <img src="<?php echo base_url('/inti/img/model.png'); ?>" alt="" class="zoom-image-head__bg2" />
                         <div class="zoom-image-head__content container">
                             <div class="zoom-image-head__subtitle">Hello from</div>
                             <div class="zoom-image-head__title">Aura Putra<br />Wijaya</div>
